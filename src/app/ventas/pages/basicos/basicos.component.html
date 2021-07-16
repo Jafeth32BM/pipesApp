@@ -1,0 +1,73 @@
+<div class="text-layout">
+  <h1>Pipes Básicos</h1>
+  <h3>Pipes incluidos en Angular</h3>
+  <p>Usualmente incluidos en el Common Module</p>
+</div>
+
+<div class="p-grid">
+  <div class="p-col-4">
+    <p-card header="UpperCase" [subheader]="nombreLower | uppercase">
+      Nombre en TS:
+      <p style="font-style: italic;">{{ nombreLower }}</p>
+      Nombre con pipe 'UpperCase':
+      <p><strong>{{ nombreLower | uppercase }}</strong></p>
+    </p-card>
+  </div>
+  <div class="p-col-4">
+    <p-card header="LowerCase" [subheader]="nombreUpper | lowercase">
+      Nombre en TS:
+      <p style="font-style: italic;">{{ nombreUpper }}</p>
+      Nombre con pipe 'LowerCase':
+      <p><strong>{{ nombreUpper | lowercase }}</strong></p>
+    </p-card>
+  </div>
+  <div class="p-col-4">
+    <p-card header="TitleCase" [subheader]="nombreComp | titlecase">
+      Nombre en TS:
+      <p style="font-style: italic;">{{ nombreComp }}</p>
+      Nombre con pipe 'TitleCase':
+      <p><strong> {{ nombreComp | titlecase }}</strong></p>
+    </p-card>
+  </div>
+</div>
+
+<div class="text-layout">
+  <h1>Date | Fecha | Pipe</h1>
+  <p>Pipe para mostrar las fechas</p>
+</div>
+
+<div class="p-grid">
+  <div class="p-col-6">
+    <p-card>
+      <ul>
+        <li>Fecha</li>
+        <li>Fecha | Date</li>
+        <li>Fecha | Date: 'Short' </li>
+        <li>Fecha | Date: 'Long' </li>
+        <li>Fecha Custom</li>
+      </ul>
+      <hr>
+      <ul>
+        <li>fecha|date: 'long':'GMT-6' </li>
+        <li>fecha|date: 'long':'GMT-4'</li>
+      </ul>
+    </p-card>
+  </div>
+  <div class="p-col-6">
+    <p-card>
+      <ul>
+        <li>{{fecha}}</li>
+        <li>{{fecha|date}}</li>
+        <li>{{fecha|date: 'short'}}</li>
+        <li>{{fecha|date: 'long'}}</li>+
+        <li>{{fecha|date: 'cccc, MMMM-d-YYYY, H:m'}}</li>
+      </ul>
+      <hr>
+      <ul>
+        <li>{{fecha|date: 'long':'GMT-6':'es-MX' }}</li>
+        <li>{{fecha|date: 'long':'GMT-4' }}</li>
+        <li>{{fecha|date: 'long':'':'fr' }}</li>
+      </ul>
+    </p-card>
+  </div>
+</div>
